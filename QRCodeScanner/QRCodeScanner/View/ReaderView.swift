@@ -51,11 +51,11 @@ class ReaderView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//
-//        self.initialSetupView()
-//    }
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    self.setPreviewLayer()
+    self.setCenterGuideLineView()
+  }
     
     private func initialSetupView() {
         self.clipsToBounds = true
@@ -98,9 +98,9 @@ class ReaderView: UIView {
             return
         }
         
-        self.setPreviewLayer()
-        self.setCenterGuideLineView()
-      self.start()
+//        self.setPreviewLayer()
+//        self.setCenterGuideLineView()
+        self.start()
     }
 
     private func setPreviewLayer() {

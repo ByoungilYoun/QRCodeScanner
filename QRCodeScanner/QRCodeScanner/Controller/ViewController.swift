@@ -51,17 +51,8 @@ class ViewController: UIViewController {
     }
 
     readerView.snp.makeConstraints {
-//      $0.top.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(20)
-      $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-      $0.leading.trailing.equalToSuperview()
-      $0.height.equalTo(80)
-//      $0.leading.trailing.equalToSuperview()
-//      $0.bottom.equalToSuperview().offset(-200)
-//      $0.centerX.equalToSuperview()
-//      $0.width.height.equalTo(80)
-//      $0.centerX.equalToSuperview()
-//      $0.width.height.equalTo(200)
-//      $0.top.leading.trailing.bottom.equalToSuperview()
+      $0.center.equalToSuperview()
+      $0.width.height.equalTo(300)
     }
 
     readButton.snp.makeConstraints {
