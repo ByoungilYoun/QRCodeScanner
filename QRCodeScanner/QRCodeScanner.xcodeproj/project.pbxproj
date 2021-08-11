@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		0F15D5E426C37157008EA915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F15D5E226C37157008EA915 /* LaunchScreen.storyboard */; };
 		0F15D5EF26C37158008EA915 /* QRCodeScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F15D5EE26C37158008EA915 /* QRCodeScannerTests.swift */; };
 		0F15D5FA26C37158008EA915 /* QRCodeScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F15D5F926C37158008EA915 /* QRCodeScannerUITests.swift */; };
+		0FDBB59A26C3746400222966 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBB59926C3746400222966 /* ReaderView.swift */; };
+		0FDBB5A126C37A2400222966 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0FDBB5A026C37A2400222966 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		0F15D5F526C37158008EA915 /* QRCodeScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRCodeScannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F15D5F926C37158008EA915 /* QRCodeScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerUITests.swift; sourceTree = "<group>"; };
 		0F15D5FB26C37158008EA915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FDBB59926C3746400222966 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDBB5A126C37A2400222966 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +105,8 @@
 			children = (
 				0F15D5D726C37156008EA915 /* AppDelegate.swift */,
 				0F15D5D926C37156008EA915 /* SceneDelegate.swift */,
-				0F15D5DB26C37156008EA915 /* ViewController.swift */,
+				0FDBB59E26C375A800222966 /* View */,
+				0FDBB59D26C375A400222966 /* Controller */,
 				0F15D5DD26C37156008EA915 /* Main.storyboard */,
 				0F15D5E026C37157008EA915 /* Assets.xcassets */,
 				0F15D5E226C37157008EA915 /* LaunchScreen.storyboard */,
@@ -128,6 +133,22 @@
 			path = QRCodeScannerUITests;
 			sourceTree = "<group>";
 		};
+		0FDBB59D26C375A400222966 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F15D5DB26C37156008EA915 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0FDBB59E26C375A800222966 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FDBB59926C3746400222966 /* ReaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +165,9 @@
 			dependencies = (
 			);
 			name = QRCodeScanner;
+			packageProductDependencies = (
+				0FDBB5A026C37A2400222966 /* SnapKit */,
+			);
 			productName = QRCodeScanner;
 			productReference = 0F15D5D426C37156008EA915 /* QRCodeScanner.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +239,9 @@
 				Base,
 			);
 			mainGroup = 0F15D5CB26C37156008EA915;
+			packageReferences = (
+				0FDBB59F26C37A2400222966 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 0F15D5D526C37156008EA915 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F15D5DC26C37156008EA915 /* ViewController.swift in Sources */,
+				0FDBB59A26C3746400222966 /* ReaderView.swift in Sources */,
 				0F15D5D826C37156008EA915 /* AppDelegate.swift in Sources */,
 				0F15D5DA26C37156008EA915 /* SceneDelegate.swift in Sources */,
 			);
@@ -593,6 +621,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0FDBB59F26C37A2400222966 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0FDBB5A026C37A2400222966 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FDBB59F26C37A2400222966 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F15D5CC26C37156008EA915 /* Project object */;
 }
